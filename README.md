@@ -14,19 +14,28 @@ You should have installed
 - Download [Database Install files (1 and 2)](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/database12c-linux-download-1959253.html)
     - `linuxamd64_12102_database_1of2.zip` (1.5G)
     - `linuxamd64_12102_database_2of2.zip` (967.5M)
-- Place the zip archives in `database_installer/`
-
+- Place the zip archives in the folder where the project resides, eg: `hello.docker.oracle12c/database_installer/`
+ 
 ## Connect to Database
 
 After running
 
     vagrant up
 
-you should be able to connect to the database.
+If no errors, you should be able to connect to the database.
 - Default password for `sys`, `system` is `vagrant`
 - Port 1521
 - service `cdb12c` (for container), `pdb` (for pluggable database)
 
+If problems occurs:
+
+1) If failing because of unzip missing:
+	vagrant ssh
+	sudo yum install unzip
+	Exit vagrant ssh session and execute:
+	vagrant provision
+You should be able see oracle installation proceeding
+	
 
 ## Links
 
