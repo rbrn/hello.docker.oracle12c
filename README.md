@@ -27,9 +27,11 @@ If no errors, you should be able to connect to the database.
 - Port 1521
 - service `cdb12c` (for container), `pdb` (for pluggable database)
 
+## Problems
 If problems occurs:
 
 1) If failing because of unzip missing:
+
 	vagrant ssh
 	sudo yum install unzip
 	Exit vagrant ssh session and execute:
